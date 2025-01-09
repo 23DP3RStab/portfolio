@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    color: yellow;
+}
+
+i {
+    transition: transform 0.5s ease;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style-type: none;
+    color: yellow;
+}
+
+.home,
+.html,
+.js,
+.about-us,
+.contact {
+    padding: 1rem 0;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 8rem
+}
+
+.navbar-links li:last-child {
+    margin-right: 10rem;
+}
+
+.html,
+.html-js-link,
+.js {
+    position: relative;
+}
+
+.html:hover .html-chevron,
+.js:hover .js-chevron {
+    transform: rotate(-180deg);
+}
+
+.html-js-link:hover i {
+    transform: rotate(-90deg);
+}
+
+.html-sub-menu,
+.html-js-sub-menu,
+.js-sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3.45rem;
+    left: -5%;
+    background-color: black;
+    width: 110%;
+}
+
+.html-sub-menu li,
+.html-js-sub-menu li,
+.js-sub-menu li {
+    padding: 0.75rem;
+}
+
+.html:hover .html-sub-menu,
+.js:hover .js-sub-menu {
+    display: flex;
+}
+
+.html-sub-menu:hover .html-sub-menu {
+    display: flex;
+}
+
+.html-js-sub-menu {
+    top: 5rem;
+    left: 9rem;
+}
+
+.html-sub-menu li:nth-child(4):hover .html-js-sub-menu {
+    display: flex;
+}
+
+.html-sub-menu:hover i {
+    transform: rotate(-90deg);
+}
