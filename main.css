@@ -8,17 +8,30 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: "Poppins", sans-serif;
+    background-color: #4F4F4F;
+    color: #CFCFCF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: black;
-    color: yellow;
+    background-color: #1f1f1f;
+    color: #CFCFCF;
 }
 
 i {
@@ -30,77 +43,84 @@ li,
 a {
     text-decoration: none;
     list-style-type: none;
-    color: yellow;
+    color: #CFCFCF;
 }
 
 .home,
 .html,
-.js,
-.about-us,
 .contact {
     padding: 1rem 0;
 }
 
 .navbar-links {
     display: flex;
-    gap: 8rem
+    gap: 8rem;
 }
 
 .navbar-links li:last-child {
     margin-right: 10rem;
 }
 
-.html,
-.html-js-link,
-.js {
+.html {
     position: relative;
 }
 
-.html:hover .html-chevron,
-.js:hover .js-chevron {
+.html:hover .html-chevron {
     transform: rotate(-180deg);
 }
 
-.html-js-link:hover i {
-    transform: rotate(-90deg);
-}
-
-.html-sub-menu,
-.html-js-sub-menu,
-.js-sub-menu {
-    display: none;
+.html-sub-menu {
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 3.45rem;
     left: -5%;
-    background-color: black;
+    background-color: #1f1f1f;
     width: 110%;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
 }
 
-.html-sub-menu li,
-.html-js-sub-menu li,
-.js-sub-menu li {
+.html-sub-menu li {
     padding: 0.75rem;
 }
 
-.html:hover .html-sub-menu,
-.js:hover .js-sub-menu {
-    display: flex;
+.html-sub-menu li:last-child {
+    border-bottom: none;
 }
 
-.html-sub-menu:hover .html-sub-menu {
-    display: flex;
+.html-sub-menu li a {
+    text-decoration: none;
+    color: #CFCFCF;
 }
 
-.html-js-sub-menu {
-    top: 5rem;
-    left: 9rem;
+.html:hover .html-sub-menu {
+    max-height: 300px;
 }
 
-.html-sub-menu li:nth-child(4):hover .html-js-sub-menu {
-    display: flex;
+.content-wrapper {
+    background-color: #333333;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+    margin-top: 80px;
 }
 
-.html-sub-menu:hover i {
-    transform: rotate(-90deg);
+.section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #555555;
+    border-radius: 10px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+}
+
+.section-text {
+    margin-bottom: 20px;
 }
