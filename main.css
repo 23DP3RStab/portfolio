@@ -117,10 +117,17 @@ a {
     border-radius: 10px;
 }
 
-.section-title {
-    margin-bottom: 10px;
+.section-content {
+    display: flex;
+    align-items: center;
+}
+
+.section-image {
+    max-width: 150px;
+    margin-right: 20px;
 }
 
 .section-text {
-    margin-bottom: 20px;
+    flex: 1;
+    max-width: 900px;
 }
